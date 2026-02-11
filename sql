@@ -1,1 +1,3 @@
+mkdir sql
+cd sql
 
