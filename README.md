@@ -1,4 +1,3 @@
-# AWS RDS MariaDB Lab 
 # AWS RDS MariaDB Lab
 
 ## 📌 Overview
