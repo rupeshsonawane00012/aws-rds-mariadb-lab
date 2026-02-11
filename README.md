@@ -71,3 +71,27 @@ sudo apt update
 sudo apt install mariadb-client -y
 
 mysql -h <rds-endpoint> -u admin -p
+```
+##3️⃣ Database Operations
+CREATE DATABASE company;
+
+USE company;
+
+CREATE TABLE employees (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(50),
+  role VARCHAR(50),
+  salary INT
+);
+
+INSERT INTO employees (name, role, salary)
+VALUES ('Rupesh','DevOps',50000);
+
+SELECT * FROM employees;
+
+##4️⃣ Backup Database
+mysqldump -h <rds-endpoint> -u admin -p company > backup.sql
+
+##5️⃣ Restore Database
+mysql -h <rds-endpoint> -u admin -p company < backup.sql
+
